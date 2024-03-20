@@ -1,0 +1,102 @@
+<html>
+  <head>
+    <!-- Start cookieyes banner -->
+    <script
+      id="cookieyes"
+      type="text/javascript"
+      src="https://cdn-cookieyes.com/client_data/6184f39c35989038023bfc41/script.js"
+    ></script>
+    <!-- End cookieyes banner -->
+
+    <script>
+      !(function () {
+        var e = "dreamdata",
+          t = (window[e] = window[e] || []);
+        if (!t.initialize) {
+          if (t.invoked)
+            window.console &&
+              console.error &&
+              console.error("Dreamdata snippet included twice.");
+          else {
+            (t.invoked = !0),
+              (t.methods = [
+                "trackSubmit",
+                "trackClick",
+                "trackLink",
+                "trackForm",
+                "pageview",
+                "identify",
+                "reset",
+                "group",
+                "track",
+                "ready",
+                "alias",
+                "debug",
+                "page",
+                "screen",
+                "once",
+                "off",
+                "on",
+                "addSourceMiddleware",
+                "addIntegrationMiddleware",
+                "setAnonymousId",
+                "addDestinationMiddleware",
+                "register",
+              ]),
+              (t.factory = function (a) {
+                return function () {
+                  if (window[e].initialized)
+                    return window[e][a].apply(window[e], arguments);
+                  var r = Array.prototype.slice.call(arguments);
+                  if (
+                    [
+                      "track",
+                      "screen",
+                      "alias",
+                      "group",
+                      "page",
+                      "identify",
+                    ].indexOf(a) > -1
+                  ) {
+                    var i = document.querySelector("link[rel='canonical']");
+                    r.push({
+                      __t: "bpc",
+                      c: (i && i.getAttribute("href")) || void 0,
+                      p: location.pathname,
+                      u: location.href,
+                      s: location.search,
+                      t: document.title,
+                      r: document.referrer,
+                    });
+                  }
+                  return r.unshift(a), t.push(r), t;
+                };
+              });
+            for (var a = 0; a < t.methods.length; a++) {
+              var r = t.methods[a];
+              t[r] = t.factory(r);
+            }
+            (t.load = function (a, r) {
+              var i = document.createElement("script");
+              (i.type = "text/javascript"),
+                (i.async = !0),
+                i.setAttribute("data-global-segment-analytics-key", e),
+                (i.src =
+                  "https://cdn.dreamdata.cloud/scripts/analytics/next/standalone.js.gz");
+              var n = document.getElementsByTagName("script")[0];
+              n.parentNode.insertBefore(i, n), (t._loadOptions = r);
+            }),
+              (t._writeKey = "bd300d19-22dc-44fc-817d-15e72fbe81f0"),
+              (t.SNIPPET_VERSION = "5.2.0"),
+              t.load("bd300d19-22dc-44fc-817d-15e72fbe81f0"),
+              t.page();
+          }
+        }
+      })();
+    </script>
+  </head>
+
+  <body>
+    <h1>CookieYes</h1>
+  </body>
+</html>
